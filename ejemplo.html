@@ -1,21 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
-
-</head>
-<meta charset="UTF-8">
-Mi portafolio
-            <title> hoja de vida _ Jose martinez </title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Responsiva: 3, 2 y 1 Columnas</title>
+ 
+<style>
+  /* Estilos generales */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+  }
+ 
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+ 
+  img{
+    width: 100px;
+  }
+ 
+  /* Contenedor de columnas */
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+ 
+  .item {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+  }
+ 
+  /* Media query para pantallas medianas: 2 columnas */
+  @media (max-width: 1024px) {
+    .container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+ 
+  /* Media query para pantallas pequeñas: 1 columna */
+  @media (max-width: 600px) {
+    .container {
+      grid-template-columns: 1fr;
+    }
+  }
+ 
+</style>
 </head>
 <body>
-
-    <a href="./ejemplo.html">ejemplo</a>
-    <header> 
-        <h1>José Martínez</h1> 
+  <h1>Diseño Responsivo con Media Queries</h1>
+  <div class="container">
+   
+    <div class="item">Sobre mi
+       <a href="./index.html"> <h1>José Martínez</h1></a> 
         <p>Estudiante de Desarrollo Web</p>
         <p>Institución Universitaria Antonio José&eacute; Camacho</p>
-    </header>
-    
-    <section> 
         <h2>Sobre mí</h2> 
         <p>Lugar y fecha de nacimiento:            Guapi-Cauca 29/08/05</p>
         <p>Direccion:                               Cll 12 #12-18. Bogota Colombia </p>
@@ -24,6 +73,8 @@ Mi portafolio
         <img src="imagenes/img.1.jpg" width="200px" alt="">
         <p>¡Hola! Soy José Martínez, estudiante de desarrollo web con especial interés en front-end.</p> 
         <p>Me apasiona la creación de sitios web intuitivos y responsive, combinando tanto aspectos técnicos como estéticos.</p>
+    </div>
+    <div class="item">
         <h3>Habilidades:</h3>
         <ul>
             <li>HTML5 y CSS3</li>
@@ -36,9 +87,8 @@ Mi portafolio
                 Tu navegador no es apto para mp4 
             </video >
         </ul>
-    </section>
-    
-    <section> 
+    </div>
+    <div class="item">
         <h2>Proyectos</h2> 
         <ul>
             <li>
@@ -57,24 +107,20 @@ Mi portafolio
                 <a href="#">Visitar sitio</a>
             </li>
         </ul> 
-    </section>
-
-</section>
-
-            <h3> Educacion </h3>   
-  <li> 2021 Graduado con honores:  Institucion Educativa Normal Superior  </li>
-   <a href="https://normalsuperiorlain.wixsite.com/iensi"> link</a>
-  <li> 2027 ingeniero en sistemas: institucion universitaria Antonio Jose Camacho </li>
-   <a href="https://www.uniajc.edu.co/"> link </a>
-  <li> 2030 Maestria en ingenieria en sistemas:  UNiversidad del valle </li>
-   <a href="https://www.univalle.edu.co/"> link</a>
-  <li> 2036 Doctorado en Sitemas: Hardvar </li>
-  <a href="https://acdcahaehe.academia.edu/"> link</a>
-
-    
-<section> 
-    
-    <section> 
+    </div>
+    <div class="item">
+        <h3> Educacion </h3>   
+        <li> 2021 Graduado con honores:  Institucion Educativa Normal Superior  </li>
+         <a href="https://normalsuperiorlain.wixsite.com/iensi"> link</a>
+        <li> 2027 ingeniero en sistemas: institucion universitaria Antonio Jose Camacho </li>
+         <a href="https://www.uniajc.edu.co/"> link </a>
+        <li> 2030 Maestria en ingenieria en sistemas:  UNiversidad del valle </li>
+         <a href="https://www.univalle.edu.co/"> link</a>
+        <li> 2036 Doctorado en Sitemas: Hardvar </li>
+        <a href="https://acdcahaehe.academia.edu/"> link</a>
+      
+    </div>
+    <div class="item">
         <h2>Contacto</h2>
         <div class="informacion de contacto">
             <p>📧 jose.martinez@example.com</p>
@@ -93,11 +139,10 @@ Mi portafolio
             
             <button type="submit">Enviar</button>
         </form>
-    </section>
-    
-    <footer> 
+    </div>
+    <div class="item"> <footer> 
         <p>2025 José Martínez - Todos los derechos reservados</p>
         <p>Cali , Colombia</p>
-    </footer>
+    </footer></div>
+  </div>
 </body>
-</html>

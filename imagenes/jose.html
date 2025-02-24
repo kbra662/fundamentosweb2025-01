@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Responsiva: 3, 2 y 1 Columnas</title>
+ 
+<style>
+  /* Estilos generales */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+  }
+ 
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+ 
+  img{
+    width: 100px;
+  }
+ 
+  /* Contenedor de columnas */
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+ 
+  .item {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+  }
+ 
+  /* Media query para pantallas medianas: 2 columnas */
+  @media (max-width: 1024px) {
+    .container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+ 
+  /* Media query para pantallas pequeñas: 1 columna */
+  @media (max-width: 600px) {
+    .container {
+      grid-template-columns: 1fr;
+    }
+  }
+ 
+</style>
+</head>
+<body>
+  <h1>Diseño Responsivo con Media Queries</h1>
+  <div class="container">
+   
+    <div class="item">Columna 1</div>
+    <div class="item">Columna 2</div>
+    <div class="item">Columna 3</div>
+    <div class="item">Columna 4</div>
+    <div class="item">Columna 5</div>
+    <div class="item">Columna 6</div>
+  </div>
+</body>
